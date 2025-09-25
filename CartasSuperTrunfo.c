@@ -30,6 +30,9 @@ int main() {
   // PIB per Capita (PIB / POPULACAO). Tipo FLOAT.
   float c1_pib_per_capita;
 
+   // Super Poder: SOMA DE TODOS OS ATRIBUTOS RELEVANTES TIPO FLOAT
+  float c1_super_poder;
+
    //---VARIAVEIS DA CARTA 2 USAREI c2 PARA IDENTIFICAR TODAS VARIAVEIS DA CARTA 02-----//
    //SEGUE O MESMO SISTEMA ACIMA APENAS MUDEI O INICIO DA VARIAVEL DE c1 para c2
   // Estado: UMA LETRA A-H TIPO CHAR
@@ -52,6 +55,9 @@ int main() {
   float c2_densidade_populacional;
   // PIB per Capita (PIB / POPULACAO). Tipo FLOAT.
   float c2_pib_per_capita;
+
+     // Super Poder: SOMA DE TODOS OS ATRIBUTOS RELEVANTES TIPO FLOAT
+  float c2_super_poder;
 
   printf("==================================================\n");
   printf("               DESAFIO SUPER TRUNFO\n");
@@ -185,6 +191,49 @@ int main() {
     printf("    PIB per Capita: %.2f reais\n", c2_pib_per_capita);
 
     printf("\n==================================================\n");
+    printf("        RESULTADOS DA BATALHA DE CARTAS\n");
+    printf("==================================================\n");
+
+    // --- LÓGICA DE COMPARAÇÃO (BATALHA) ---
+    // USAMOS O OPERADOR TERNÁRIO (?:) PARA EXIBIR O RESULTADO E O VALOR BINÁRIO (1 OU 0)
+
+    // 1. População (Maior vence)
+    printf("População: %s (%d)\n", 
+    (c1_populacao > c2_populacao) ? "Carta 1 venceu" : "Carta 2 venceu", 
+    (c1_populacao > c2_populacao)); // O RESULTADO DA COMPARACAO E 1 (VERDADEIRO) OU 0 (FALSO)
+
+    // 2. Área (Maior vence)
+    printf("Área: %s (%d)\n", 
+    (c1_area_km2 > c2_area_km2) ? "Carta 1 venceu" : "Carta 2 venceu", 
+    (c1_area_km2 > c2_area_km2));
+
+    // 3. PIB (Maior vence)
+    printf("PIB: %s (%d)\n", 
+    (c1_pib_bilhoes > c2_pib_bilhoes) ? "Carta 1 venceu" : "Carta 2 venceu", 
+    (c1_pib_bilhoes > c2_pib_bilhoes));
+ 
+    // 4. Pontos Turísticos (Maior vence)
+    printf("Pontos Turísticos: %s (%d)\n", 
+    (c1_num_pontos_turisticos > c2_num_pontos_turisticos) ? "Carta 1 venceu" : "Carta 2 venceu", 
+    (c1_num_pontos_turisticos > c2_num_pontos_turisticos));
+
+    // 5. Densidade Populacional (Menor vence)
+    printf("Densidade Populacional: %s (%d)\n", 
+    (c1_densidade_populacional < c2_densidade_populacional) ? "Carta 1 venceu" : "Carta 2 venceu", 
+    (c1_densidade_populacional < c2_densidade_populacional)); // NOTA: AQUI A LOGICA É INVERTIDA (<)
+
+    // 6. PIB per Capita (Maior vence)
+    printf("PIB per Capita: %s (%d)\n", 
+    (c1_pib_per_capita > c2_pib_per_capita) ? "Carta 1 venceu" : "Carta 2 venceu", 
+    (c1_pib_per_capita > c2_pib_per_capita));
+
+    // 7. Super Poder (Maior vence)
+    printf("Super Poder: %s (%d)\n", 
+    (c1_super_poder > c2_super_poder) ? "Carta 1 venceu" : "Carta 2 venceu", 
+    (c1_super_poder > c2_super_poder));
+
+
+    printf("\n==================================================\n");
     printf("         SUPER TRUNFO FINALIZADO COM SUCESSO\n");
     printf("==================================================\n");
 
@@ -247,6 +296,18 @@ NO FINAL DEVERA TER UM RESULTADO COMO ESSE DE EXEMPLO
     Numero de Pontos Turisticos: 25
     Densidade Populacional: 3856.22 hab/km²
     PIB per Capita: 82980.76 reais
+    
+ ==================================================
+        RESULTADOS DA BATALHA DE CARTAS
+==================================================
+População: Carta 1 venceu (1)
+Área: Carta 1 venceu (1)
+PIB: Carta 1 venceu (1)
+Pontos Turísticos: Carta 2 venceu (0)
+Densidade Populacional: Carta 1 venceu (1)
+PIB per Capita: Carta 2 venceu (0)
+Super Poder: Carta 2 venceu (0)
+
 
 ==================================================
          SUPER TRUNFO FINALIZADO COM SUCESSO
