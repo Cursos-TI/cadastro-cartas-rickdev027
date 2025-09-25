@@ -65,7 +65,7 @@ int main() {
     printf("3. Nome da Cidade (sem espacos): ");
     scanf("%s", c1_nome_cidade); // IRA LER O NOME DA STRING CIDADE 
 
-    printf("4. Populacao (Habitantes): ");
+    printf("4. Populacao (Habitantes) Nao Ultilizar . ou ,: ");
     scanf("%d", &c1_populacao); // IRA LER UM NUMERO INT
 
     printf("5. Area (em km²): ");
@@ -97,7 +97,7 @@ int main() {
     printf("3. Nome da Cidade (sem espacos): ");
     scanf("%s", c2_nome_cidade); // IRA LER O NOME DA STRING CIDADE 
 
-    printf("4. Populacao (Habitantes): ");
+    printf("4. Populacao (Habitantes) Nao Ultilizar . ou ,: ");
     scanf("%d", &c2_populacao); // IRA LER UM NUMERO INT
 
     printf("5. Area (em km²): ");
