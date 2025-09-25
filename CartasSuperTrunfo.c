@@ -112,6 +112,70 @@ int main() {
     printf("\n--- CARTA 2 CADASTRADA ---\n\n");
 
   // Área para exibição dos dados da cidade
+  // UTILIZAREI A FUNCAO PRINTF PARA EXIBIR OS DADOS NO TERMINAL
+  // O FORMATO '%.2f' GARANTE QUE O VALORES EM FLOAT  (Area e PIB) EXIBAM SEMPRE COM APENAS DUAS CASAS DECIMAIS
+
+  printf("==================================================\n");
+  printf("         DADOS CADASTRADOS COM SUCESSO!!\n");
+  printf("==================================================\n\n");
+ /* COLOQUEI ESPACO  printf("    Estado: %c\n", c1_estado) E NOS OUTROS APENAS PARA FICAR ALINHADA NO FINAL DA MENSAGEM NO TERMINAL */
+     // --- EXIBICAO DA CARTA 1 ---
+    printf("### CARTA 1: %s ###\n", c1_codigo);
+    printf("    Estado: %c\n", c1_estado);
+    printf("    Codigo da Carta: %s\n", c1_codigo);
+    printf("    Nome da Cidade: %s\n", c1_nome_cidade);
+    printf("    Populacao: %d habitantes\n", c1_populacao);
+    printf("    Area: %.2f km²\n", c1_area_km2);
+    printf("    PIB: %.2f bilhoes de reais\n", c1_pib_bilhoes);
+    printf("    Numero de Pontos Turisticos: %d\n", c1_num_pontos_turisticos);
+
+    printf("\n"); //  APENAS UMA LINHA EM BRANCO PARA SEPARAR
+
+    // --- EXIBICAO DA CARTA 2 ---
+    printf("### CARTA 2: %s ###\n", c2_codigo);
+    printf("    Estado: %c\n", c2_estado);
+    printf("    Codigo da Carta: %s\n", c2_codigo);
+    printf("    Nome da Cidade: %s\n", c2_nome_cidade);
+    printf("    Populacao: %d habitantes\n", c2_populacao);
+    printf("    Area: %.2f km²\n", c2_area_km2);
+    printf("    PIB: %.2f bilhoes de reais\n", c2_pib_bilhoes);
+    printf("    Numero de Pontos Turisticos: %d\n", c2_num_pontos_turisticos);
+
+    printf("\n==================================================\n");
+    printf("         SUPER TRUNFO FINALIZADO COM SUCESSO\n");
+    printf("==================================================\n");
+
+
+
+/*
+
+NO FINAL DEVERA TER UM RESULTADO COMO ESSE DE EXEMPLO 
+==================================================
+         DADOS CADASTRADOS COM SUCESSO!!
+==================================================
+
+### CARTA 1: 05 ###
+    Estado: B
+    Codigo da Carta: 05
+    Nome da Cidade: Vitoria
+    Populacao: 1561 habitantes
+    Area: 5165.00 km²
+    PIB: 65156.00 bilhoes de reais
+    Numero de Pontos Turisticos: 156
+
+### CARTA 2: 02 ###
+    Estado: A
+    Codigo da Carta: 02
+    Nome da Cidade: VilaVelha
+    Populacao: 6666 habitantes
+    Area: 156165.00 km²
+    PIB: 156.00 bilhoes de reais
+    Numero de Pontos Turisticos: 15156
+
+==================================================
+         SUPER TRUNFO FINALIZADO COM SUCESSO
+==================================================
+*/
 
 return 0;
 } 
