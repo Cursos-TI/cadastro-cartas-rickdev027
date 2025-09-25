@@ -24,6 +24,24 @@ int main() {
   // Numero de Pontos Turisticos: Tipo INT
   int c1_num_pontos_turisticos;
 
+   //---VARIAVEIS DA CARTA 2 USAREI c2 PARA IDENTIFICAR TODAS VARIAVEIS DA CARTA 02-----//
+   //SEGUE O MESMO SISTEMA ACIMA APENAS MUDEI O INICIO DA VARIAVEL DE c1 para c2
+  // Estado: UMA LETRA A-H TIPO CHAR
+  char c2_estado; 
+  // Codigo da Cidade: SERA DECLARADO CODIGO DA CARTA EX: D01 USA UM  ARRAY DE CHAR COM TAMANHO 4 PARA QUANDO DER ENTER ELE ENTENDER O TERMINADOR \0
+  char c2_codigo[4];
+  // Nome da Cidade: UM ARRAY DE CHAR DE TAMANHO 50 PARA ARMAZENAR O NOME DAS CIDADES
+  char c2_nome_cidade[50];
+  // Populacao: NUMERO DE HABITANTES NA CIDADE Tipo INT
+  int c2_populacao;
+  // Area em km²: Tipo Float 
+  float c2_area_km2;
+  // PIB: EM BILHOES DE REAIS Tipo FLOAT
+  float c2_pib_bilhoes;
+  // Numero de Pontos Turisticos: Tipo INT
+  int c2_num_pontos_turisticos;
+
+
   // Área para entrada de dados
 
   // Área para exibição dos dados da cidade
