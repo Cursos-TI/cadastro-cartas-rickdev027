@@ -41,8 +41,75 @@ int main() {
   // Numero de Pontos Turisticos: Tipo INT
   int c2_num_pontos_turisticos;
 
+  printf("==================================================\n");
+  printf("               DESAFIO SUPER TRUNFO\n");
+  printf("==================================================\n\n");
+
 
   // Área para entrada de dados
+
+   // ====================================================================
+    // ONDE IREMOS DEFINIR A ENTRADA DE DADOS - CARTA 1
+    //
+    // IREI UTULIZAR A FUNCAO SCANF PARA LER OQUE O JOGADOR DIGITAR
+    // COLOCAR UM ESPACO ANTES DE %c EM SCANF  PARA IGNORAR QUALQUER 
+    // QUERBRA DE LINHA QUE FIQUE NO TERMINAL
+    // ====================================================================
+    printf("1. Estado (A-H): ");
+    scanf(" %c", &c1_estado); // IRA LER UM UNICO CARACTER DIGITADO 
+
+    printf("2. Codigo (Ex: A01): ");
+    scanf("%s", c1_codigo); // IRA LER UMA STRING QUE ESTA DENTRO DO ARRAY.  ENTAO NAO PRECISO DECLARAR & ANTES DA FUNCAO POIS E UMA STRING
+
+    // Informarei o Usuario Para Nao Digitar Nome Das Cidades com Espaco!
+    printf("3. Nome da Cidade (sem espacos): ");
+    scanf("%s", c1_nome_cidade); // IRA LER O NOME DA STRING CIDADE 
+
+    printf("4. Populacao (Habitantes): ");
+    scanf("%d", &c1_populacao); // IRA LER UM NUMERO INT
+
+    printf("5. Area (em km²): ");
+    scanf("%f", &c1_area_km2); // IRA LER UM NUMERO FLOAT
+
+    printf("6. PIB (em Bilhoes de Reais): ");
+    scanf("%f", &c1_pib_bilhoes); // IRA LER UM NUMERO FLOAT
+
+    printf("7. Numero de Pontos Turisticos: ");
+    scanf("%d", &c1_num_pontos_turisticos); //  IRA LER UM NUMERO INTEIRO
+
+    printf("\n--- CARTA 1 CADASTRADA ---\n\n");
+
+     // ====================================================================
+    // ONDE IREMOS DEFINIR A ENTRADA DE DADOS - CARTA 2 IDENTICO AO ACIMA APENAS TROCANDO DE c1 PARA c2
+    //
+    // IREI UTULIZAR A FUNCAO SCANF PARA LER OQUE O JOGADOR DIGITAR
+    // COLOCAR UM ESPACO ANTES DE %c EM SCANF  PARA IGNORAR QUALQUER 
+    // QUERBRA DE LINHA QUE FIQUE NO TERMINAL
+    // ====================================================================
+
+        printf("1. Estado (A-H): ");
+    scanf(" %c", &:c2_estado); // IRA LER UM UNICO CARACTER DIGITADO 
+
+    printf("2. Codigo (Ex: A01): ");
+    scanf("%s", :c2_codigo); // IRA LER UMA STRING QUE ESTA DENTRO DO ARRAY.  ENTAO NAO PRECISO DECLARAR & ANTES DA FUNCAO POIS E UMA STRING
+
+    // Informarei o Usuario Para Nao Digitar Nome Das Cidades com Espaco!
+    printf("3. Nome da Cidade (sem espacos): ");
+    scanf("%s", :c2_nome_cidade); // IRA LER O NOME DA STRING CIDADE 
+
+    printf("4. Populacao (Habitantes): ");
+    scanf("%d", &:c2_populacao); // IRA LER UM NUMERO INT
+
+    printf("5. Area (em km²): ");
+    scanf("%f", &:c2_area_km2); // IRA LER UM NUMERO FLOAT
+
+    printf("6. PIB (em Bilhoes de Reais): ");
+    scanf("%f", &:c2_pib_bilhoes); // IRA LER UM NUMERO FLOAT
+
+    printf("7. Numero de Pontos Turisticos: ");
+    scanf("%d", &:c2_num_pontos_turisticos); //  IRA LER UM NUMERO INTEIRO
+
+    printf("\n--- CARTA 1 CADASTRADA ---\n\n");
 
   // Área para exibição dos dados da cidade
 
