@@ -24,6 +24,12 @@ int main() {
   // Numero de Pontos Turisticos: Tipo INT
   int c1_num_pontos_turisticos;
 
+  // NOVAS VARIAVEIS PARA O NIVEL AVENTUREIRO CARTA 1
+  // Densidade Populacional (POPULACAO / AREA). Tipo FLOAT.
+  float c1_densidade_populacional;
+  // PIB per Capita (PIB / POPULACAO). Tipo FLOAT.
+  float c1_pib_per_capita;
+
    //---VARIAVEIS DA CARTA 2 USAREI c2 PARA IDENTIFICAR TODAS VARIAVEIS DA CARTA 02-----//
    //SEGUE O MESMO SISTEMA ACIMA APENAS MUDEI O INICIO DA VARIAVEL DE c1 para c2
   // Estado: UMA LETRA A-H TIPO CHAR
@@ -40,6 +46,12 @@ int main() {
   float c2_pib_bilhoes;
   // Numero de Pontos Turisticos: Tipo INT
   int c2_num_pontos_turisticos;
+
+  // NOVAS VARIAVEIS PARA O NIVEL AVENTUREIRO CARTA 2
+  // Densidade Populacional (POPULACAO / AREA). Tipo FLOAT.
+  float c2_densidade_populacional;
+  // PIB per Capita (PIB / POPULACAO). Tipo FLOAT.
+  float c2_pib_per_capita;
 
   printf("==================================================\n");
   printf("               DESAFIO SUPER TRUNFO\n");
@@ -115,8 +127,34 @@ int main() {
   // UTILIZAREI A FUNCAO PRINTF PARA EXIBIR OS DADOS NO TERMINAL
   // O FORMATO '%.2f' GARANTE QUE O VALORES EM FLOAT  (Area e PIB) EXIBAM SEMPRE COM APENAS DUAS CASAS DECIMAIS
 
+  /* ====================================================================
+                          ÁREA PARA CÁLCULOS 
+     ====================================================================*/
+
+  // --- CALCULOS DA CARTA 1 ---
+  // Densidade POPULACIONAL = POPULACAO / AREA
+  // O (float) na frente de c1_populacao faz a conversao de int para float
+  // antes da divisao, garantindo que o resultado seja float (divisao real).
+  c1_densidade_populacional = (float)c1_populacao / c1_area_km2; 
+
+  // PIB per Capita = (PIB em Bilhoes * 1.000.000.000) / POPULACAO
+  // Multiplicamos o PIB por 1 bilhao para obter o valor total em reais, 
+  // e entao dividimos pela populacao.
+  c1_pib_per_capita = (c1_pib_bilhoes * 1000000000.0) / (float)c1_populacao;
+
+
+  // --- CALCULOS DA CARTA 2  SEGUE A MESMA LOGICA DE CALCULO PARA CARTA 1---
+  // Densidade Populacional = População / Área
+  c2_densidade_populacional = (float)c2_populacao / c2_area_km2; 
+
+  // PIB per Capita = (PIB em Bilhoes * 1.000.000.000) / População
+  c2_pib_per_capita = (c2_pib_bilhoes * 1000000000.0) / (float)c2_populacao;
+
+
+
+
   printf("==================================================\n");
-  printf("         DADOS CADASTRADOS COM SUCESSO!!\n");
+  printf("      DADOS CADASTRADOS & CALCULADOS COM SUCESSO!!\n");
   printf("==================================================\n\n");
  /* COLOQUEI ESPACO  printf("    Estado: %c\n", c1_estado) E NOS OUTROS APENAS PARA FICAR ALINHADA NO FINAL DA MENSAGEM NO TERMINAL */
      // --- EXIBICAO DA CARTA 1 ---
@@ -128,6 +166,9 @@ int main() {
     printf("    Area: %.2f km²\n", c1_area_km2);
     printf("    PIB: %.2f bilhoes de reais\n", c1_pib_bilhoes);
     printf("    Numero de Pontos Turisticos: %d\n", c1_num_pontos_turisticos);
+    printf("    Densidade Populacional: %.2f hab/km²\n", c1_densidade_populacional);
+    printf("    PIB per Capita: %.2f reais\n", c1_pib_per_capita);
+
 
     printf("\n"); //  APENAS UMA LINHA EM BRANCO PARA SEPARAR
 
@@ -140,6 +181,8 @@ int main() {
     printf("    Area: %.2f km²\n", c2_area_km2);
     printf("    PIB: %.2f bilhoes de reais\n", c2_pib_bilhoes);
     printf("    Numero de Pontos Turisticos: %d\n", c2_num_pontos_turisticos);
+    printf("    Densidade Populacional: %.2f hab/km²\n", c2_densidade_populacional);
+    printf("    PIB per Capita: %.2f reais\n", c2_pib_per_capita);
 
     printf("\n==================================================\n");
     printf("         SUPER TRUNFO FINALIZADO COM SUCESSO\n");
@@ -176,6 +219,38 @@ NO FINAL DEVERA TER UM RESULTADO COMO ESSE DE EXEMPLO
          SUPER TRUNFO FINALIZADO COM SUCESSO
 ==================================================
 */
+
+/*COM O NOVO UPDATE DE CALCULOS AS RESPOSTA DEVEM SER RETORNADAS COMO NO EXEMPLO ABAIXO!!
+
+==================================================
+      DADOS CADASTRADOS & CALCULADOS COM SUCESSO!!
+==================================================
+
+### CARTA 1: 01 ###
+    Estado: E
+    Codigo da Carta: 01
+    Nome da Cidade: Serra
+    Populacao: 536765 habitantes
+    Area: 547.63 km²
+    PIB: 37.28 bilhoes de reais
+    Numero de Pontos Turisticos: 10
+    Densidade Populacional: 980.16 hab/km²
+    PIB per Capita: 69453.11 reais
+
+### CARTA 2: 02 ###
+    Estado: E
+    Codigo da Carta: 02
+    Nome da Cidade: Vitoria
+    Populacao: 378642 habitantes
+    Area: 98.19 km²
+    PIB: 31.42 bilhoes de reais
+    Numero de Pontos Turisticos: 25
+    Densidade Populacional: 3856.22 hab/km²
+    PIB per Capita: 82980.76 reais
+
+==================================================
+         SUPER TRUNFO FINALIZADO COM SUCESSO
+==================================================*/
 
 return 0;
 } 
